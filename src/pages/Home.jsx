@@ -10,10 +10,11 @@ const Home = () =>{
         <section className='image-holder'>
         <img className='home-image' src={logo} alt="Studio Ghibli Logo" />
         </section>
-        <h3 >Welcome to the Studio Ghibli Api Lab</h3>
-        <p>This lab highlights the usage of React and Api skills. It uses conditional rendering,
-        data fetching from a REST Api through using a useEffect hook, manages multiple array maps using
-        an useState hook, and Bootstrap for style. Please click the buttons to view resources.  </p>
+        <h3 >Welcome to the Studio Ghibli API Lab</h3>
+        <p> Welcome to my React Routing Lab using the Studio Ghibli API. This application takes inspiration from IMDB and focuses on the animation film studio Studio Ghibli.
+        This project utilizes React, useState and useEffect hooks, Fetch, Rest API, Bootstrap, and React Router. Please use the navbar to click around and view all films, people, location, species, vehicles.
+        Also, the click the full details button on each page to to see more content.Enjoy!!
+        </p>
         </section>
 
     )

@@ -25,12 +25,11 @@
     flex-direction: column;
     /* width:clamp(20rem, 50rem, 70rem); */
     margin:3rem;
-    background-color: rgb(217, 223, 230);
+    box-shadow: 5px 5px 5px 5px rgb(216, 212, 212);
     border-radius: 5px;
 }
 .home-showcase *{
    width: 60vw;
    text-align: center;
 }
-
 

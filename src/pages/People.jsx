@@ -21,11 +21,12 @@ const Peoples = () => {
       <section className="card-holder">
         {peoples.map(people => (
 
-          <div class="cards border border-dark rounded" key={people.id} style={{ width: '15rem' }}  >
-            <div class="card-body">
-              <h5 class="card-title">{people.name}</h5>
+          <div class="cards border border-light rounded shadow" key={people.id} style={{ width: '15rem' }}  >
+            <div class="card-body text-center">
+              <h5 class="card-title ">{people.name}</h5>
+              <hr></hr>
             </div>
-            <div class="card-body">
+            <div class="card-body text-center">
               <Link to={`/people/${people.id}`} className="btn btn-outline-primary">Full Details</Link>
             </div>
           </div>

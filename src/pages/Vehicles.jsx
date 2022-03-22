@@ -1,7 +1,7 @@
 
 import { useEffect,useState} from "react";
 import  './Films.css';
-import {Link} from "react-router-dom";
+
 
 
 
@@ -24,10 +24,10 @@ const Vehicles = () => {
         <main>
             <section className="card-holder">
                 {vehicles.map(vehicle=>(
-                  
-                 <div class="cards border border-dark rounded text-center" key={vehicle.id} style={{ width: '15rem' }}  >
+                 <div class="cards border border-light shadow rounded text-center" key={vehicle.id} style={{ width: '15rem' }}  >
                  <div class="card-body">
                    <h5 class="card-title">{vehicle.name}</h5>
+                   <hr></hr>
                  </div>
                  <ul class="list-group list-group-flush">
                    <li class="list-group-item">Description: {vehicle.description}</li>

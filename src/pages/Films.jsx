@@ -26,13 +26,13 @@ const Films = () => {
             <section className="card-holder">
                 {films.map(film=>(
                   
-                 <div class="cards" key={film.id} style={{ width: '15rem' }}  >
+                 <div class="cards shadow rounded" key={film.id} style={{ width: '15rem' }}  >
                  <img class="card-img-top" src={film.image} alt="Film" ></img>
-                 <div class="card-body">
+                 <div class="card-body text-center">
                    <h5 class="card-title">{film.title}</h5>
                    <p class="card-text">{`${film.description.substring(0,175)}...`}</p>
                  </div>
-                 <div class="card-body">
+                 <div class="card-body text-center">
                    <Link to={`/films/${film.id}`} className="btn btn-outline-primary">Full Details</Link>
                  </div>
                </div>

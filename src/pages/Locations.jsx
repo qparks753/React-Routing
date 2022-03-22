@@ -24,7 +24,7 @@ const Locations = () => {
             <section className="card-holder">
                 {locations.map(location=>(
                   
-                 <div class="cards" key={location.id} style={{ width: '15rem' }}  >
+                 <div class="cards shadow rounded text-center" key={location.id} style={{ width: '15rem' }}  >
                  <div class="card-body">
                    <h5 class="card-title">{location.name}</h5>
                  </div>

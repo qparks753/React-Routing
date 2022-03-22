@@ -25,9 +25,10 @@ const Species = () => {
             <section className="card-holder">
                 {species.map(species=>(
                   
-                 <div class="cards border border-dark rounded text-center" key={species.id} style={{ width: '15rem' }}  >
+                 <div class="cards border border-light shadow rounded text-center" key={species.id} style={{ width: '15rem' }}  >
                  <div class="card-body">
                    <h5 class="card-title">{species.name}</h5>
+                   <hr></hr>
                  </div>
                  <ul class="list-group list-group-flush">
                  <li class="list-group-item">Classification: {species.classification}</li>
