@@ -1,9 +1,6 @@
-/* eslint-disable no-undef */
+
 
 import { useEffect,useState} from "react";
-// import { ListGroupItem } from "react-bootstrap";
-// import Card from 'react-bootstrap/Card';
-// import ListGroup from 'react-bootstrap/ListGroup';
 import  './Films.css';
 import {Link} from "react-router-dom";
 

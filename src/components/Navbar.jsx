@@ -13,6 +13,15 @@ const Navbar = () => {
             <NavLink to="/films" className={({ isActive }) => `nav-link ${isActive && 'active'}`}>
                 View Films
             </NavLink>
+            <NavLink to="/locations" className={({ isActive }) => `nav-link ${isActive && 'active'}`}>
+                View Locations
+            </NavLink>
+            <NavLink to="/Vehicles" className={({ isActive }) => `nav-link ${isActive && 'active'}`}>
+                View Vehicles
+            </NavLink>
+            <NavLink to="/species" className={({ isActive }) => `nav-link ${isActive && 'active'}`}>
+                View Species
+            </NavLink>
         </nav>
     );
 };
