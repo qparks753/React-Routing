@@ -1,9 +1,11 @@
 
 import { NavLink } from 'react-router-dom';
+import logo from "../components/logo.png";
 
 const Navbar = () => {
     return (
         <nav className="nav nav-pills justify-content-center p-2 shadow ">
+            <img  style={{height:"2rem", width:"4rem", margin:".5rem"}} className='home-image' src={logo} alt="Studio Ghibli Logo" />
             <NavLink to="/" className={({ isActive }) => `nav-link ${isActive && 'active'}`}>
                  Home
             </NavLink>
