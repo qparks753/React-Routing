@@ -21,7 +21,7 @@ const Peoples = () => {
       <section className="card-holder">
         {peoples.map(people => (
 
-          <div class="cards" key={people.id} style={{ width: '15rem' }}  >
+          <div class="cards border border-dark rounded" key={people.id} style={{ width: '15rem' }}  >
             <div class="card-body">
               <h5 class="card-title">{people.name}</h5>
             </div>

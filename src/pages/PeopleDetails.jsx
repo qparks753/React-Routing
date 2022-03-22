@@ -1,74 +1,44 @@
+import { useEffect,useState} from "react";
+import { Link, useParams } from "react-router-dom";
+
+
 const PeopleDetails = ()=> {
+    const {peopleid} = useParams();
+    const [peoples, setPeoples] = useState(null);
 
+    useEffect(() => {
+       
+        fetch(`https://ghibliapi.herokuapp.com/people/${peopleid}`)
+          .then(res => res.json())
+          .then(data => setPeoples(data))
+          .catch(e=>alert(e.message));
+    
+        }, [peopleid]);
 
+        if(!peoples){
+        return <h1 className="mt-2 d-flex justify-content-center">Loading...</h1>;
+        };
 
     return(
-    
-    
-    <h1>People Details</h1>
-    
-    )
-    
-    
-    
-    }
+
+   <section className="mt-4 d-flex justify-content-center text-center">
+   <div class="card" style={{ width: '40rem' }}  >
+    <div class="card-header">
+      {peoples.name}
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Gender:  {peoples.gender}</li>
+      <li class="list-group-item">Age:  {peoples.age}</li>
+      <li class="list-group-item">Eye Color:  {peoples.eye_color}</li>
+      <li class="list-group-item">Hair Color: {peoples.hair_color}</li>
+    </ul>
+    <div class="card-footer ">
+      <Link to="/people/">Return to People</Link>
+    </div>
+   </div>
+   </section>
+)}
 
 export default PeopleDetails;
 
 
-
-
-
-
-
-
-
-
-
-// import { useEffect,useState} from "react";
-// import { ListGroupItem } from "react-bootstrap";
-// import Card from 'react-bootstrap/Card';
-// import ListGroup from 'react-bootstrap/ListGroup';
-// import  './Films.css';
-
-
-
-// const Peoples = () => {
-
-//     const [peoples, setPeoples] = useState([]);
-
-//     useEffect(() => {
-       
-//        fetch("https://ghibliapi.herokuapp.com/people")
-//             .then(res => res.json())
-//             .then(data => setPeoples(data));
-
-//     }, []);
-
-//     return (
-//         <main>
-//             <section className="card-holder">
-        
-//                 {peoples.map(people=>(
-
-//                     <Card key={people.id} style={{ width: '15rem' }}>
-//                     <Card.Body>
-//                       <Card.Title>{people.name}</Card.Title>
-//                     </Card.Body>
-//                     <ListGroup className="list-group-flush">
-//                       <ListGroupItem>Gender: {people.gender}</ListGroupItem>
-//                       <ListGroupItem>Age: {people.age}</ListGroupItem>
-//                       <ListGroupItem>Eye Color: {people.eye_color}</ListGroupItem>
-//                       <ListGroupItem> Hair Color{people.hair_color}</ListGroupItem>
-//                     </ListGroup>
-//                     <Card.Body>
-//                      <Card.Link href="{people.species}">Species</Card.Link>
-//                      <Card.Link href="{people.url}">Url</Card.Link>
-//                      <Card.Link href="{people.films}">Films</Card.Link>
-//                       </Card.Body>
-//                   </Card>
-//                 ))};
-//             </section>
-//         </main>
-//     )
-// }
